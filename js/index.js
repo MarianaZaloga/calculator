@@ -15,6 +15,16 @@ function equalPressed(e) {
    display.value = eval(display.value);
 }
 
+// заміна
+const change = document.querySelector('.operations');
+change.addEventListener('click', changePressed);
+const operations = ['+', '-', '*', '/'];
+function changePressed(e) {
+    if(operators.indexOf(lastChar) > -1)
+				 operations.replace(e , '');
+    operations.preventDefault();
+}
+
 // Clean button
 
 const cleanUp = document.querySelector('.clen');
@@ -25,3 +35,7 @@ function cleanUpPressed(e){
    e.innerText = '';
 }
 
+// функція обмеження вводу букв
+function isNum(e) {
+     return Number(e) === e;
+     alert = 'Ви введи букву!Введіть цифри!'}
